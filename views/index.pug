@@ -1,0 +1,10 @@
+extends layout
+include utilities/user
+block content
+  include Home/hero.pug
+  main.min-h-screen.mt-10
+    include Home/deli.pug
+    include Home/foods.pug
+    .w-full.justify-center.flex.mb-10
+      .px-8.py-2.border-2.border-indigo-700.bg-white.font-extrabold.transform.transition-all.duration-500.text-indigo-700.shadow-lg.rounded-lg.cursor-pointer(class="hover:scale-105 hover:bg-indigo-700 hover:text-white hover:shadow-2xl", onclick="location.href='/foods'") View All
+    

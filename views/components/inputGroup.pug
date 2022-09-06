@@ -1,0 +1,6 @@
+mixin input(id, icon, name, type, placeholder, required)
+    .flex.flex-col.text-left
+        label(for=id).mb-2.flex.items-center
+            i(class=icon)
+            span.ml-2= name
+        input(type=type, placeholder=placeholder, required=required, name=id id=id).rounded-lg.form-input.border.border-gray-400.shadow.placeholder-gray-300.placeholder.px-4.py-2

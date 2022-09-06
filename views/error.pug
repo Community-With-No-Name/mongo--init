@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    .flex.flex-col.items-center.justify-center.w-full.h-screen
+        img.transition-all.transform.h-72(src="/images/i1.svg" class="duration-500  hover:scale-110 hover:-translate-y-5")
+        h1.w-full.font-extrabold.text-center.text-7xl= error.status
+        p= message
+        a.px-6.py-2.mt-2.text-white.bg-blue-700.rounded-lg.shadow-lg(href="/" class="font-extrabold transition-all duration-500 transform border-2 border-white ring-2 ring-blue-700 hover:bg-white hover:text-blue-700 hover:scale-105").
+            
+            Go back to home page
+            
