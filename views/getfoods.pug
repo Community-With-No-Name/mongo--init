@@ -1,0 +1,14 @@
+extends layout
+include components/food
+block content
+    .mt-20
+        .text-5xl.text-center.font-script.mb-4.font-extrabold Our Delicacies
+        include components/foodGrid
+            if(foods)
+                each food in foods
+                    .p-3.bg-white.rounded-lg.flex.shadow-lg.transform.transition-all.duration-500.border-2.border-white.hring-2.ring-gray-900.text-gray-900(class="cursor-pointer hover:scale-105 hover:shadow-2xl hover:bg-gray-900 hover:text-white")
+                        .bg-gray-900.rounded-full.h-6.w-6.mr-3
+                        .flex.flex-col
+                            .font-extrabold.text-2xl.font-script= food.name
+                            .text-md $#{food.price}
+                            .font-light.text-sm=food.description

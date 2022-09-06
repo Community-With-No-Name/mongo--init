@@ -1,0 +1,13 @@
+mixin food(img, name, price, id)
+    a.bg-white.shadow.transition-all.duration-500.transform.rounded-lg.flex.flex-col.m-2(class="hover:shadow-lg hover:scale-105" href=`/foods/${id}`)
+        img.h-60.rounded-t-lg.relative.object-center.object-cover.transform.transition-all.duration-500(src=img, class="")
+        .mt-5.px-4.pb-5.flex.flex-col
+            .font-extrabold.text-lg= name
+            .text-base.font-medium $#{price}
+            .text-sm.font-extralight.text-gray-400
+                |Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem necessitatibus voluptatum iste? Provident molestias ipsum hic nobis enim accusantium repellendus, et iste ratione architecto. Rerum dolorem laborum a eligendi doloribus?
+                .text-indigo-700.cursor-pointer #{"Read More >>>>"}
+            .w-full.flex.justify-evenly.mt-4
+                i.far.fa-heart.p-2.bg-red-100.rounded-full.text-red-500.duration-500.cursor-pointer.shadow(class="hover:bg-red-500 hover:text-white hover:shadow-lg")
+                i.far.fa-shopping-cart.p-2.bg-green-100.rounded-full.text-green-500.duration-500.cursor-pointer.shadow(class="hover:bg-green-500 hover:text-white hover:shadow-lg")
+                i.far.fa-share.p-2.bg-indigo-100.rounded-full.text-indigo-500.duration-500.cursor-pointer.shadow(class="hover:bg-indigo-500 hover:text-white hover:shadow-lg")

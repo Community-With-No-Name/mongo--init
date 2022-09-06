@@ -1,0 +1,23 @@
+extends layout
+include components/inputGroup
+block content
+    .min-h-screen.grid.grid-cols-11(class="lg:grid-cols-2")
+        .hidden.h-screen.bg-center.bg-cover.bg-no-repeat(style="background-image: url(/img/i6.jpg)", class='lg:block')
+        //- .bg-transparent.h-screen.w-full(class="lg:bg-white" style="background: url(/img/i6.jpg)")
+        form(action="/register", method="post").flex.flex-col.justify-center.h-screen.mx-auto(class="w-1/2")
+            .text-5xl.text-center.font-script.mb-2.font-extrabold Pizzeria 🍕
+            .text-2xl.text-center.mb-4.font-extrabold 
+                |Create Account
+                i.far.fa-user-plus.ml-2
+            .my-5
+                +input("email", "far fa-envelope", "Email Address", "email", "example@gmail.com", true)
+            .mb-5
+                +input("password", "far fa-asterisk", "Password", "password", "**************", true)
+            button(type="submit", class="hover:scale-105 hover:shadow-lg hover:bg-white hover:text-indigo-800").cursor-pointer.border-2.rounded-lg.py-2.px-8.font-bold.transition-all.transform.duration-500.bg-indigo-700.text-white.border-indigo-700.flex.items-center.justify-center
+                |Create Account
+                i.far.fa-user-plus.ml-2
+            .flex.justify-center.mt-3
+                |Have an account?
+                span.text-indigo-700.ml-1(class="font-bold duration-500 transform hover:text-indigo-900 hover:scale-105")
+                    a(href="/login") #{" "}Sign In 
+                

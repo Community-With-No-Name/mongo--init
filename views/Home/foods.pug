@@ -1,0 +1,4 @@
+include ../components/food.pug
+include ../components/foodGrid.pug
+    each food in foods
+        +food(food.img, food.name, food.price)

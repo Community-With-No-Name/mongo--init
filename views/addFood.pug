@@ -1,0 +1,12 @@
+extends layout
+include components/inputGroup 
+block content
+    form.flex.h-screen.w-full.flex-col.items-center.justify-center(method="post", action="/add-food")
+        h1.font-script.text-center.font-extrabold.text-7xl Add Food
+        //- +input("name", "far fa-food", "Food Name", "file", "Enter Food Name", true)
+        +input("name", "far fa-bread-slice", "Food Name", "text", "Enter Food Name", true)
+        +input("price", "far fa-dollar-sign", "Food Price", "number", "Enter Food Price", true)
+        +input("description", "far fa-book-open", "Food Description", "text", "Enter Food Description", true)
+        button(type="submit", class="hover:scale-105 hover:shadow-lg hover:bg-white hover:text-indigo-800").cursor-pointer.border-2.rounded-lg.py-2.px-8.font-bold.transition-all.transform.duration-500.bg-indigo-700.text-white.border-indigo-700.flex.items-center.justify-center.mt-5
+                |Add Food
+                i.far.fa-plus.ml-2

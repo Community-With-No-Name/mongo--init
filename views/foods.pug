@@ -1,0 +1,8 @@
+extends layout
+include components/food
+block content
+    .mt-20
+        .text-5xl.text-center.font-script.mb-4.font-extrabold Our Delicacies
+        include components/foodGrid
+            each food in foods
+                +food(food.img, food.name, food.price, food.id)
